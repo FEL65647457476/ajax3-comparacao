@@ -28,6 +28,6 @@ Demonstrar diferentes formas de realizar requisições AJAX e comparar **desempe
 
 ---
 
-Autor: *Felipe Lopes*  
+participantes: *Felipe Lopes Miranda,Erick Rocha ferraz Gustavo josé da silva Davi felix Reis Ribeiro, Gledosn Eduardo Silva*  
 Curso: *Análise e Desenvolvimento de Sistemas*  
 Disciplina: *Programação Web*
