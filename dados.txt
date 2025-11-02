@@ -1,0 +1,2 @@
+Este é o conteúdo do arquivo dados.txt.
+Ele foi carregado dinamicamente usando AJAX, Fetch, Promises e Async/Await.
