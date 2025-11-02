@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>AJAX com Promises</title>
+</head>
+<body>
+  <h2>Exemplo AJAX com Promises (XHR)</h2>
+  <button id="carregar">Carregar dados</button>
+  <div id="conteudo"></div>
+
+  <script>
+    function requisicaoPromise(url) {
+      return new Promise((resolve, reject) => {
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', url, true);
+        xhr.onload = () => {
+          if (xhr.status === 200) {
+            resolve(xhr.responseText);
+          } else {
+            reject('Erro: ' + xhr.status);
+          }
+        };
+        xhr.onerror = () => reject('Erro de rede');
+        xhr.send();
+      });
+    }
+
+    document.getElementById('carregar').addEventListener('click', () => {
+      requisicaoPromise('dados.txt')
+        .then(dados => {
+          document.getElementById('conteudo').innerHTML = dados;
+        })
+        .catch(erro => {
+          document.getElementById('conteudo').innerHTML = erro;
+        });
+    });
+  </script>
+</body>
+</html>
